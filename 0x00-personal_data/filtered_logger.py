@@ -4,6 +4,7 @@
     returns the log message obfuscated
 """
 
+
 import logging
 from typing import List
 import re
