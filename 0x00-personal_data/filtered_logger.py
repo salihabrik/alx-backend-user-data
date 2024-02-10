@@ -17,11 +17,11 @@ def filter_datum(fields: List[str], redaction: str, message: str,
                  separator: str) -> str:
     """ a function called filter_datum that returns the log message
         Args:
-            fields: a list of strings representing all fields
-            redaction: a string representing by what the field 
+            fields: a list of strings representing all field
+            redaction: a string representing by what the field
             message: a string representing the log line
-            separator: a string representing by which character is 
-            separating all fields in the log line (message) 
+            separator: a string representing by which character is
+            separating all fields in the log line (message)
         Returns: message
     """
     for format in fields:
@@ -50,7 +50,7 @@ class RedactingFormatter(logging.Formatter):
 
 
 def get_logger() -> logging.Logger:
-    """ a get_logger function that takes no arguments and 
+    """ a get_logger function that takes no arguments and
     returns a logging.Logger object
     """
 
@@ -79,7 +79,7 @@ def get_db() -> mysql.connector.connection.MySQLConnection:
 
 
 def main():
-    """ a main function that takes no arguments and returns 
+    """ a main function that takes no arguments and returns
     """
     fields = "name,email,phone,ssn,password,ip,last_login,user_agent"
     columns = fields.split(',')
