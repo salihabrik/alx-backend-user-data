@@ -5,6 +5,7 @@
 This project focuses on implementing Session Authentication in a Flask web application. Session Authentication is a common mechanism used to manage user sessions and enhance security in web applications. Unlike the typical practice of using existing frameworks or modules for authentication, this project explores the process of building a Session Authentication system from scratch to gain a deeper understanding of its mechanisms.
 
 ## Project Structure
+
 The project is organized into several tasks, each building upon the previous one. Here's a brief overview of the tasks:
 
 Et moi et moi et moi!
@@ -40,37 +41,48 @@ New view for Session Authentication
 Create a new Flask view to handle routes specific to Session Authentication.
 Implement a login route to authenticate users and create sessions.
 
-# Getting Started
+## Getting Started
+
 Prerequisites
 ```
 Python 3.x
+```
+
+```
 Flask (pip install flask)
 ```
-# Installation
+## Installation
+
 Clone the repository: ```git clone https://github.com/yourusername/session-auth-flask.git```
 Navigate to the project directory: cd session-auth-flask
 Install dependencies: ```pip install -r requirements.txt```
-# Usage
+## Usage
+
 Set the environment variable AUTH_TYPE to session_auth.
 Run the Flask application: ```python app.py```
 Access the application at ```http://127.0.0.1:5000/```
 # Configuration
+
 The application can be configured by modifying the environment variables in the .env file.
 Contributing
 Feel free to contribute by opening issues or submitting pull requests. Please follow the code of conduct.
 
 # License
+
 This project is licensed under the MIT License - see the LICENSE file for details.
 
 # Acknowledgments
+
 Special thanks to the Flask community for their excellent documentation and resources.
 # Resources
 
-Flask Documentation:``` https://flask.palletsprojects.com/```
-Python Documentation:``` https://docs.python.org/```
-Author
-Your Name
+Flask Documentation:
+``` https://flask.palletsprojects.com/```
+Python Documentation:
+``` https://docs.python.org/```
+
 
 # Contact
+
 For any inquiries or feedback, please contact briksaliha@gmail.com.
 
