@@ -23,7 +23,7 @@ class Auth:
               authentication
         Return:
             - True if path is not in excluded_paths, else False
-        """
+        
         if path is None:
             return True
         elif excluded_paths is None or excluded_paths == []:
