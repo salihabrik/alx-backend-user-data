@@ -1,57 +1,42 @@
-# Flask Basic Authentication Project
+# Simple API
 
-This Flask project implements basic authentication for an API using Flask's framework. It includes features for handling unauthorized and forbidden access, a custom authentication class (BasicAuth), and supports Basic Authentication.
+Simple HTTP API for playing with `User` model.
 
-Getting Started
-Prerequisites
-Python 3.x
-Flask
-Installation
-Clone the repository:
 
-```
-git clone https://github.com/yourusername/flask-basic-authentication.git
-cd flask-basic-authentica
-```
-Install dependencies:
+## Files
 
-```
-pip install -r requirements.txt
-```
-Usage
-Set the environment variable for authentication type:
+### `models/`
+
+- `base.py`: base of all models of the API - handle serialization to file
+- `user.py`: user model
+
+### `api/v1`
+
+- `app.py`: entry point of the API
+- `views/index.py`: basic endpoints of the API: `/status` and `/stats`
+- `views/users.py`: all users endpoints
+
+
+## Setup
 
 ```
-export AUTH_TYPE=basic
+$ pip3 install -r requirements.txt
 ```
-Run the Flask application:
+
+
+## Run
 
 ```
-python api/v1/app.py
-
+$ API_HOST=0.0.0.0 API_PORT=5000 python3 -m api.v1.app
 ```
-Access the API endpoints and test basic authentication.
 
-Project Structure
-api/v1/app.py: Main Flask application file.
-auth.py: Contains the Auth and BasicAuth classes for authentication.
-tests/: Directory for test cases.
-Tasks and Features
-The project includes the following tasks and features:
 
-Task 0: Handling Unauthorized Access (401)
-Task 1: Handling Forbidden Access (403)
-Task 3: Authentication Class (Auth)
-Task 4: Defining Unauthenticated Routes
-Task 5: Request Verification
-Task 6: Basic Authentication Implementation
-Task 7: Extracting Base64 from Basic
-Task 8: Decoding Base64
-Task 9: Extracting User Credentials
-Task 10: User Object Creation
-Task 11: Updating current_user method
-Contributing
-Feel free to contribute to the project by opening issues or submitting pull requests. Your feedback and contributions are welcome!
+## Routes
 
-License
-This project is licensed under the MIT License.
+- `GET /api/v1/status`: returns the status of the API
+- `GET /api/v1/stats`: returns some stats of the API
+- `GET /api/v1/users`: returns the list of users
+- `GET /api/v1/users/:id`: returns an user based on the ID
+- `DELETE /api/v1/users/:id`: deletes an user based on the ID
+- `POST /api/v1/users`: creates a new user (JSON parameters: `email`, `password`, `last_name` (optional) and `first_name` (optional))
+- `PUT /api/v1/users/:id`: updates an user based on the ID (JSON parameters: `last_name` and `first_name`)
